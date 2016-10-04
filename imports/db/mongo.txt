@@ -1,4 +1,6 @@
 
+Mongo DB Name: sunmarkerapp 
+
 Collection Name: user
 
 "user" Structure:
