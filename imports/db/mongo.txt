@@ -1,0 +1,147 @@
+
+Collection Name: user
+
+"user" Structure:
+------------------
+db.createCollection( "user",
+   {
+      validator: { $or:
+         [
+         { USER_ID : { $type : "int" } },
+         { ROLE_ID : { $type : "int" } },
+         { FIRSTNAME : { $type : "string" } },
+         { LASTNAME : { $type : "string" } },
+         { MOBILE : { $type : "int" } },
+         { EMAIL : { $type : "string" } },
+         { PASSWORD : { $type : "string" } },
+         { ADDRESS1 : { $type : "string" } },
+         { ADDRESS2 : { $type : "string" } },
+         { CITY : { $type : "string" } },
+         { STATE : { $type : "string" } },
+         { COUNTRY : { $type : "string" } },
+         { ZIPCODE : { $type : "string" } },
+         { DOB : { $type: "date" } },
+         { PROFILE_IMAGE : { $type : "string" } },
+         { PHONE_ISVALID : { $in: [ "0", "1" ] } },
+         { USER_STATUS : { $in: [ "0", "1" ] } },            
+         { CREATEDDATE : { $type: "date" } },
+         { UPDATEDDATE : { $type: "date" } },
+         { DELETEDDATE : { $type: "date" } },
+         { DELETED_STATUS : { $in: [ "0" , "1" ] } },
+         { SECURITY_QUESTION1    : { $type : "string" } },
+         { SECURITY_ANSWER1   : { $type : "string" } },
+         { SECURITY_QUESTION2    : { $type : "string" } },
+         { SECURITY_ANSWER2   : { $type : "string" } }
+         ]
+      }
+   }
+);
+
+db.user.insert( 
+   {
+      USER_ID : "1" ,
+      ROLE_ID : "1" ,
+      FIRSTNAME : "Karthik" ,
+      LASTNAME : "K" ,
+      MOBILE : "9486738397" ,
+      EMAIL : "sunmarkerpharma@gmail.com" ,
+      PASSWORD  : "askdvbakc456bi23qwusdgrw34q2vr",
+      ADDRESS1 : "Test Address" ,
+      ADDRESS2 : "Address line 2" ,
+      CITY : "Sivakasi" ,
+      STATE : "Tamil Nadu" ,
+      COUNTRY : "India" ,
+      ZIPCODE : "626123" ,
+      DOB : new Date() ,
+      PROFILE_IMAGE : "karthik.jpg" ,
+      PHONE_ISVALID : "1"  ,
+      USER_STATUS : "1" ,
+      CREATEDDATE : new Date() , 
+      UPDATEDDATE : "" , 
+      DELETEDDATE : "" ,
+      DELETED_STATUS : "0" ,
+      SECURITY_QUESTION1 : "What is your pet name?" ,
+      SECURITY_ANSWER1  : "Jacky" ,
+      SECURITY_QUESTION2   : "What is your year of birth?" ,
+      SECURITY_ANSWER2  : "1985" 
+   } 
+);
+
+
+Collection Name: cms
+
+"cms" Structure:
+------------------
+db.createCollection( "cms",
+   {
+      validator: { $or:
+         [
+            { CMS_ID : { $type : "int" } },
+            { CMS_INDEX : { $type : "string" } },
+            { CMS_TITLE : { $type : "string" } },
+            { CMS_DESCRIPTION : { $type : "string" } },
+            { CMS_STATUS : { $in: [ "0", "1" ] } },            
+            { CREATEDDATE : { $type: "date" } },
+            { UPDATEDDATE : { $type: "date" } },
+            { DELETEDDATE : { $type: "date" } },
+            { DELETED_STATUS : { $in: [ "0" , "1" ] } }
+         ]
+      }
+   }
+);
+
+db.cms.insert( 
+   {
+      CMS_ID : "1" ,
+      CMS_INDEX : "HOME" ,
+      CMS_TITLE : "Home" ,
+      CMS_DESCRIPTION : "Sun Marker Pharma" ,
+      CMS_STATUS : "1" ,
+      CREATEDDATE : new Date() , 
+      UPDATEDDATE : "" , 
+      DELETEDDATE : "" ,
+      DELETED_STATUS : "0" ,
+   } 
+);
+
+db.cms.insert( 
+   {
+      CMS_ID : "2" ,
+      CMS_INDEX : "ABOUTUS" ,
+      CMS_TITLE : "About us" ,
+      CMS_DESCRIPTION : "About Us page contents" ,
+      CMS_STATUS : "1" ,
+      CREATEDDATE : new Date() , 
+      UPDATEDDATE : "" , 
+      DELETEDDATE : "" ,
+      DELETED_STATUS : "0" ,
+   } 
+);
+
+db.cms.insert( 
+   {
+      CMS_ID : "3" ,
+      CMS_INDEX : "PRODUCTS" ,
+      CMS_TITLE : "products" ,
+      CMS_DESCRIPTION : "Products page contents" ,
+      CMS_STATUS : "1" ,
+      CREATEDDATE : new Date() , 
+      UPDATEDDATE : "" , 
+      DELETEDDATE : "" ,
+      DELETED_STATUS : "0" ,
+   } 
+);
+
+ db.cms.insert( 
+   {
+      CMS_ID : "4" ,
+      CMS_INDEX : "CONTACTUS" ,
+      CMS_TITLE : "Contact us" ,
+      CMS_DESCRIPTION : "contact us page contents" ,
+      CMS_STATUS : "1" ,
+      CREATEDDATE : new Date() , 
+      UPDATEDDATE : "" , 
+      DELETEDDATE : "" ,
+      DELETED_STATUS : "0" ,
+   } 
+);
